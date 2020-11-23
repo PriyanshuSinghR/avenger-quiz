@@ -1,20 +1,22 @@
 var readlineSync = require("readline-sync");
-var score = 0;
-var user = readlineSync.question("What is your Name?  ");
+var chalk = require('chalk');
 
-console.log(`Welcome ${user} to Avenger Quiz?`);
+var score = 0;
+var user = readlineSync.question(chalk.magenta("What is your Name?  "));
+
+console.log(`Welcome ${chalk.yellow.italic(user)} to Avenger Quiz?`+ "\n");
 
 function play(question, answer) {
   var userAnswer = readlineSync.question(question);
 
   if(userAnswer.toUpperCase() === answer.toUpperCase()) {
-    console.log("Right");
+    console.log(chalk.green("Right"));
     score ++
   } else {
-    console.log("Wrong");
+    console.log(chalk.red("Wrong"));
   }
-  console.log(`Current score: ${score}`)
-  console.log("------------------------------------")
+  console.log(`Current score: ${chalk.cyan(score)}`)
+  console.log(chalk.gray("------------------------------------"))
 }
 
 var questions = [{
@@ -112,4 +114,5 @@ for(var i=0; i<questions.length; i++) {
   play(questions[i].question, questions[i].answer)
 }
 
-console.log(`${user} your score is ${score}/${questions.length}`)
+console.log(`${user} your score is ${chalk.blue(score)}/${chalk.green(questions.length)}`)
+
