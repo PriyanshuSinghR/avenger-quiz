@@ -16,6 +16,10 @@
 
 [Live Project](https://repl.it/@OVERLORDWRATH/quiz?embed=1&amp;output=1)
 
+## Screenshots
+
+![avenger](https://user-images.githubusercontent.com/52795506/205549370-026febd9-5a9a-4521-b4ad-fcdf9faf443e.jpg)
+
 ## Connect with me
 
 - [LinkedIn](https://www.linkedin.com/in/priyanshu844/)
